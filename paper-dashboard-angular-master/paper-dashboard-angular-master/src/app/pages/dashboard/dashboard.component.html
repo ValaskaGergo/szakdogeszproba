@@ -1,0 +1,94 @@
+
+<div class="limit-width">
+  <div class="top-row d-flex justify-content-center w-100">
+    <h1 class="my-auto pl-4 title title-text" style="line-height: 80px;">Barber Garage</h1>
+    <button type="button" class="btn btn-round mx-4">Default</button>
+  </div>
+</div>
+<img src="../../../assets/img/barber_chair.jpg" class="mt-5">
+<div class="container main-container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-8 text-center">
+      <h2 class="mb-0"><i>"Whatever you hear at the barbershop, stays at the barbershop"</i></h2>
+    </div>
+  </div>
+  <hr class="solid">
+  <div class="row align-items-center">
+    <div class="col-md-6 col-12 text-center">
+      <img src="../../../assets/img/barber_man.jpg" class="mx-auto barber-man-img">
+    </div>
+    <div class="col-md-6 col-12 text-center barber-text">
+      <p>A barber is a person whose occupation is mainly to cut, dress, groom, style and shave men's and boys' hair or beards. Barber Garage is a full-service barbershop, which means we do a lot more than just give you a nice haircut. A haircut, we believe, should be a tradition, a nostalgic experience that takes you back to a simpler time. High-end full-service barbershop built by our forefathers in 2018. Our services are only available to men. We specialise in moustache and beared trimming and shaping and sell a variety of hair cuts. A standard or traditional men’s style hair cut requires experienced workers, using shears or clippers as required by the stylist, and  clippers to clean the neck line. A cut that necessitates the use of more sophisticated forms, materials, and styling.</p>
+    </div>
+    <div class="col-12 text-center mt-5">
+      <h3 class="mb-0"><i>"Being a barber is about taking care of people"</i></h3>
+    </div>
+  </div>
+  <hr class="solid">
+  <div class="row">
+    <div class="col-md-4 col-12 text-center icon-border">
+      <img src="../../../assets/img/icons/scissors.png" class="mx-auto icon-img">
+      <p class="mt-4">Haircut - Consultation with the barber, Clipper and Shear work with clean detailing.  </p>
+    </div>
+    <div class="col-md-4 col-12 text-center icon-border">
+      <img src="../../../assets/img/icons/clipper.png" class="mx-auto icon-img">
+      <p class="mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+    </div>
+    <div class="col-md-4 col-12 text-center icon-border">
+      <img src="../../../assets/img/icons/electric-shaver.png" class="mx-auto icon-img">
+      <p class="mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+    </div>
+    <div class="col-md-4 col-12 text-center icon-border">
+      <img src="../../../assets/img/icons/eyebrow.png" class="mx-auto icon-img">
+      <p class="mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+    </div>
+    <div class="col-md-4 col-12 text-center icon-border">
+      <img src="../../../assets/img/icons/inspiration.png" class="mx-auto icon-img">
+      <p class="mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+    </div>
+    <div class="col-md-4 col-12 text-center icon-border">
+      <img src="../../../assets/img/icons/mustache.png" class="mx-auto icon-img">
+      <p class="mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+    </div>
+    <div class="col-md-4 col-12 text-center icon-border">
+      <img src="../../../assets/img/icons/shaving-razor.png" class="mx-auto icon-img">
+      <p class="mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+    </div>
+    <div class="col-md-4 col-12 text-center icon-border">
+      <img src="../../../assets/img/icons/smiling-baby.png" class="mx-auto icon-img">
+      <p class="mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+    </div>
+    <div class="col-md-4 col-12 text-center icon-border">
+      <img src="../../../assets/img/icons/stylist.png" class="mx-auto icon-img">
+      <p class="mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+    </div>
+    <div class="col-12 text-center justify-content-center mt-3">
+      <button type="button" class="btn btn-round">Default</button>
+    </div>
+
+    <div class="col-12 text-center justify-content-center mt-3">
+      <mwl-calendar-week-view
+      class="w-100"
+    [viewDate]="viewDate"
+    [events]="events"
+    [excludeDays]="excludeDays"
+    [viewDate]="viewDate"
+    [hourSegments]="1"
+    [dayStartHour]="8"
+    [dayEndHour]="15"
+    [refresh]="refresh"
+    (eventClicked)="eventClicked($event)"
+  >
+  </mwl-calendar-week-view>
+    </div>
+
+    
+  </div>
+</div>
+
+<div class="d-flex w-100 footer mt-5 align-items-center justify-content-center">
+    <img src="../../../assets/img/socials/facebook.png" class="mx-auto">
+    <img src="../../../assets/img/socials/instagram.png" class="mx-auto">
+    <img src="../../../assets/img/socials/phone-call.png" class="mx-auto">
+    <img src="../../../assets/img/socials/telegram.png" class="mx-auto">
+</div>
