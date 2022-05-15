@@ -1,43 +1,34 @@
 var models = require('../models/index')
 
-const { Appointment, Slot } = models;
+const {Appointment, Slot} = models;
 const appointmentController = {
-  all(req, res) {
-    // Returns all appointments
-    Appointment.find({}).exec((err, appointments) => res.json(appointments));
-  },
-  create(req, res) {
-    var requestBody = req.body;
-    var newslot = new Slot({
-      slot_time: requestBody.slot_time,
-      slot_date: requestBody.slot_date,
-      created_at: Date.now()
-    });
-    newslot.save();
-    // Creates a new record from a submitted form
-    var newappointment = new Appointment({
-      name: requestBody.name,
-      email: requestBody.email,
-      phone: requestBody.phone,
-      slots: newslot._id
-    });
-    let msg =
-      requestBody.name +
-      " " +
-      "this message is to confirm your appointment at" +
-      " " +
-      requestBody.appointment;
-    console.log(requestBody.appointment);
-    // and saves the record to
-    // the data base
-    newappointment.save((err, saved) => {
-      // Returns the saved appointment
-      // after a successful save
-      Appointment.find({ _id: saved._id })
-        .populate("slots")
-        .exec((err, appointment) => res.json(appointment));
-    });
-  }
+    all(req, res) {
+        // Returns all appointments
+        Appointment.find({}).exec((err, appointments) => res.json(appointments));
+    },
+    find(req, res) {
+        // Returns all appointments
+        console.log(req.body)
+        Appointment.find({day_of_week: req.body.day_of_week, length : req.body.length}).exec((err, appointments) => res.json(appointments));
+    },
+    create(req, res) {
+        const requestBody = req.body;
+        Appointment.remove({}, () => {
+            requestBody.forEach(obj => {
+             const newAppointment = new Appointment({
+                 day_of_week: obj.day_of_week,
+                 start_date: obj.start_date,
+                 length: obj.length
+             });
+             newAppointment.save();
+            }, (result) => {
+                res.status(200).json({
+                    message: "Appointments saved",
+                    result: result
+                })
+            });
+        })
+    },
 };
 
 module.exports = appointmentController;
